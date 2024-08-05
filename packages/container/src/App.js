@@ -1,20 +1,20 @@
-import React, { lazy, Suspense, useState, useEffect } from "react";
-import { Router, Route, Switch, Redirect } from "react-router-dom";
+import React, { lazy, Suspense, useState, useEffect } from 'react';
+import { Router, Route, Switch, Redirect } from 'react-router-dom';
 import {
   StylesProvider,
   createGenerateClassName,
-} from "@material-ui/core/styles";
-import { createBrowserHistory } from "history";
+} from '@material-ui/core/styles';
+import { createBrowserHistory } from 'history';
 
-import Progress from "./components/Progress";
-import Header from "./components/Header";
+import Progress from './components/Progress';
+import Header from './components/Header';
 
-const MarketingLazy = lazy(() => import("./components/MarketingApp"));
-const AuthLazy = lazy(() => import("./components/AuthApp"));
-const DashboardLazy = lazy(() => import("./components/DashboardApp"));
+const MarketingLazy = lazy(() => import('./components/MarketingApp'));
+const AuthLazy = lazy(() => import('./components/AuthApp'));
+const DashboardLazy = lazy(() => import('./components/DashboardApp'));
 
 const generateClassName = createGenerateClassName({
-  productionPrefix: "container-",
+  productionPrefix: 'co',
 });
 
 const history = createBrowserHistory();
@@ -24,7 +24,7 @@ export default () => {
 
   useEffect(() => {
     if (isSignedIn) {
-      history.push("/dashboard");
+      history.push('/dashboard');
     }
   }, [isSignedIn]);
 
