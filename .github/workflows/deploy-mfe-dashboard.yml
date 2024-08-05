@@ -3,7 +3,7 @@ name: deploy-mfe-dashboard
 on:
   push:
     branches:
-      - master
+      - main
     paths:
       - "packages/dashboard/**"
 
